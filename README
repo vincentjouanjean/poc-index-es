@@ -1,0 +1,63 @@
+== POC index/bulk Elasticsearch
+
+== Description
+
+== Before run
+
+== Requires
+I do this test with Elasticsearch 7.13.3
+
+Set JVM heap size to Elasticsearch with 2g or decrease parameters
+-Xms2g
+-Xmx2g
+
+== Example result
+
+save 10 - MIN - Optional[37] save 10 - MAX - Optional[67] save 10 - AVG - OptionalDouble[51.7]
+save 19 - MIN - Optional[58] save 19 - MAX - Optional[80] save 19 - AVG - OptionalDouble[66.4]
+saveNew 1 - MIN - Optional[23] saveNew 1 - MAX - Optional[53] saveNew 1 - AVG - OptionalDouble[29.6]
+saveNew 10 - MIN - Optional[34] saveNew 10 - MAX - Optional[63] saveNew 10 - AVG - OptionalDouble[43.5]
+saveNew 19 - MIN - Optional[53] saveNew 19 - MAX - Optional[77] saveNew 19 - AVG - OptionalDouble[61.8]
+customSave 1 - MIN - Optional[11] customSave 1 - MAX - Optional[76] customSave 1 - AVG - OptionalDouble[25.8]
+customSave 10 - MIN - Optional[9] customSave 10 - MAX - Optional[28] customSave 10 - AVG - OptionalDouble[15.1]
+customSave 19 - MIN - Optional[11] customSave 19 - MAX - Optional[25] customSave 19 - AVG - OptionalDouble[16.4]
+customSaveNew 1 - MIN - Optional[7] customSaveNew 1 - MAX - Optional[39] customSaveNew 1 - AVG - OptionalDouble[13.2]
+customSaveNew 10 - MIN - Optional[9] customSaveNew 10 - MAX - Optional[21] customSaveNew 10 - AVG - OptionalDouble[14.1]
+customSaveNew 19 - MIN - Optional[10] customSaveNew 19 - MAX - Optional[24] customSaveNew 19 - AVG - OptionalDouble[16.8]
+delete 1 - MIN - Optional[18] delete 1 - MAX - Optional[31] delete 1 - AVG - OptionalDouble[26.3]
+delete 10 - MIN - Optional[17] delete 10 - MAX - Optional[32] delete 10 - AVG - OptionalDouble[22.3]
+delete 19 - MIN - Optional[17] delete 19 - MAX - Optional[28] delete 19 - AVG - OptionalDouble[22.2]
+update 1 - MIN - Optional[9] update 1 - MAX - Optional[33] update 1 - AVG - OptionalDouble[16.3]
+update 10 - MIN - Optional[8] update 10 - MAX - Optional[19] update 10 - AVG - OptionalDouble[12.3]
+update 19 - MIN - Optional[10] update 19 - MAX - Optional[24] update 19 - AVG - OptionalDouble[14.3]
+bulk 1 - Bulk 10 - 20
+bulk 1 - Bulk 100 - 54
+bulk 1 - bulk 200 - 71
+bulk 1 - bulk 400 - 105
+bulk 1 - bulk 800 - 165
+bulk 1 - bulk 1600 - 330
+bulk 1 - bulk 3200 - 609
+bulk 1 - bulk 6400 - 1211
+bulk 10 - Bulk 10 - 19
+bulk 10 - Bulk 100 - 117
+bulk 10 - bulk 200 - 215
+bulk 10 - bulk 400 - 350
+bulk 10 - bulk 800 - 701
+bulk 10 - bulk 1600 - 1407
+bulk 10 - bulk 3200 - 2986
+bulk 10 - bulk 6400 - 6264
+bulk 19 - Bulk 10 - 24
+bulk 19 - Bulk 100 - 166
+bulk 19 - bulk 200 - 318
+bulk 19 - bulk 400 - 686
+bulk 19 - bulk 800 - 1284
+bulk 19 - bulk 1600 - 2654
+bulk 19 - bulk 3200 - 5499
+bulk 19 - bulk 6400 - 10941
+1 thread(s) par lot de 50 : 13034
+10 thread(s) par lot de 50 : 5363
+10 thread(s) par lot de 50 : 4725
+100 thread(s) par lot de 50 : 5432
+100 thread(s) par lot de 50 : 4988
+20 thread(s) par lot de 50 : 5401
+2 thread(s) par lot de 50 : 5401
